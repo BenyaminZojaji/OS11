@@ -1,0 +1,52 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{pythontex}
+
+
+\title{My resume}
+\author{Benyamin Zojaji}
+\date{June 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Biography and brief resume}
+    howdy, my name is Benyamin Zojaji I'm 21 y.o student of computer engineering at Sadjad university of tech.I'm interested in learning new languages and currently I'm trying to take a few steps towards  learning penetration testing.
+\section{Image}
+    \includegraphics[scale=0.2]{me.jpg}
+\section{my table}
+    \begin{center}
+    \begin{tabular}{ |c|c|c| } 
+     \hline
+     1 & 2 & 3 \\ 
+     4 & 5 & 6 \\ 
+     7 & 8 & 9 \\ 
+     \hline
+    \end{tabular}
+    \end{center}
+\section{Math formula}
+    \[ 
+    F = G \left( \frac{m_1 m_2}{r^2} \right)
+    \]
+    \[E=mc^2\]
+\section{Code}
+    \begin{lstlisting}[language=Python]
+    import hashlib
+    def hash_file(filename):
+       h = hashlib.sha1()
+       with open(filename,'rb') as file:
+           chunk = 0
+           while chunk != b'':
+               # read only 1024 bytes at a time
+               chunk = file.read(1024)
+               h.update(chunk)
+       return h.hexdigest()
+    message = hash_file("track1.mp3")
+    print(message)
+    \end{lstlisting}
+\end{document}
+    
+    
